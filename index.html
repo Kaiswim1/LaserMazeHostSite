@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laser Maze Game</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 0px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #2c3e50;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 800px;
+      margin: 10px auto 20px auto;
+      padding-left: 20px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    section {
+      margin-top: 60px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #777;
+    } 
+    .center{
+      text-align: center;
+    } 
+    a button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      display: inline-block;
+  }
+
+  .button-container {
+    text-align: center;
+  } 
+  .black{
+    background-color: black;  
+  } 
+  .black:hover{
+     background-color: rgb(103, 103, 103); 
+  }
+  </style>
+</head>
+<body>
+  <h1>Laser Maze Game</h1>
+  <p class="center">Click below to download the game and enjoy!</p> 
+  <a href="Lazer Maze Game2.zip" download>
+    <button>Download for desktop <i>(.JAR)</i></button>
+  </a>   
+  <a href="https://github.com/Kaiswim1/LaserMazeGameJava">
+  <button class="black">Github Repository</button>
+</a>
+  <hr>
+  <video autoplay muted loop playsinline src="laserMazeVideo.mp4"  style="display: block; margin: 0 auto; width: 65%; height: auto;">></video>
+
+
+  <section>
+    <h2>The Laser Maze Game</h2>
+
+    <h3>Why I Created It</h3>
+    <p>
+      I made this project for a few reasons. One of my students gave me the idea for this project. Not only was this a really fun challenge, it highlights a small piece of most of my skills and understanding.
+      I wasn’t aiming for a large project with hundreds of features, but rather something easy to understand, easy to explore, and filled with core concepts.
+    </p>
+    <p>
+      My goal was to make a basic Laser Maze example with the best code formatting I could. Every line of code and architecture design decision prioritizes conciseness and readability.
+      This project was built to be a portfolio piece that is easily digestible. 
+    </p>
+    <p><i>Any code reviews, questions, and comments would be greatly appreciated.</i></p>
+
+    <h3>The Concepts Highlighted</h3>
+
+    <h4>Object-Oriented Design</h4>
+    <p>
+      OOP is used primarily for abstraction and clarity. For example, the <code>Graphics</code> class extends <code>JFrame</code> for rendering, and the <code>Controls</code> class extends <code>MouseListener</code> to manage user input.
+      These relationships clarify each class’s purpose without overcomplicating reuse.
+    </p>
+
+    <h4>Data Structures</h4>
+    <p>
+      A <code>HashMap</code> tracks mirror objects. Custom <code>equals</code> and <code>hashCode</code> methods ensure mirrors with the same (x, y) position are treated as duplicates, regardless of rotation.
+      I considered using Java's record type, but the rotation field needed mutability, so I chose a traditional class instead.
+    </p>
+
+    <h4>Algorithmic Thinking</h4>
+    <p>
+      The laser algorithm simulates a beam hopping through a grid, changing direction when hitting mirrors. Using trigonometric logic, the beam reflects realistically,
+      and a line is drawn for each hop to form a continuous beam. This demonstrates solving a difficult problem by breaking it down into a sequence of smaller, more digestable algorithmic steps.
+    </p> 
+
+    <!--IMG--> 
+    <img src="lasers.png" alt="Centered Image" style="display: block; margin: 0 auto;">
+
+
+    <h4>Reflection and Annotations</h4>
+    <p>
+      I created custom annotations and used reflection to enforce that certain classes include specific parameters — such as a <code>Graphics</code> object for rendering or a <code>MouseEvent</code> for handling input.
+      This shows my ability to write self-validating, scalable code.
+    </p>
+
+    <h4>Unit Testing for Complex Logic</h4>
+    <p>
+      Unit tests are included for the core multi-step logic. While I don’t test every line, I believe complex processes should be validated thoroughly.
+    </p>
+
+    <h4>UI Concepts</h4>
+    <p>
+      Basic UI interactions demonstrate an understanding of <code>MouseEvent</code> handling and rendering with <code>java.awt.Graphics</code>.
+    </p>
+
+    <h4>Clean Code Practices</h4>
+    <p>
+      All functions are concise and follow the single-responsibility principle. Indentation is deliberate, emphasizing simplicity and maintainability.
+    </p>
+
+    <h4>Thoughtful Code Comments</h4>
+    <p>
+      Comments focus on explaining <em>why</em> decisions were made, not just what the code does — making the project easier to understand and maintain.
+    </p>
+
+    <h4>Design Principles</h4>
+    <p>
+      The code follows modern, maintainable design principles — including enforcing contracts via annotations, minimizing class responsibilities, and ensuring the code is modular, testable, and easy to expand.
+    </p>
+
+    <h4>Packaging, Deployment, and GitHub Distribution</h4>
+    <p>
+      The project is packaged as a downloadable JAR and hosted on GitHub Pages — entirely free to use. The full source code is available on GitHub.
+      Contributions are welcome!
+    </p>
+
+    <p><strong>Possible feature ideas include:</strong></p>
+    <ul>
+      <li>Add a menu to choose mirror count and grid size</li>
+      <li>Implement a level system</li>
+      <li>Create a mode where the laser must hit 3 specific targets</li>
+      <li>Add multiplayer using Express.js (LAN server with octet parsing, hosting/joining)</li>
+    </ul>
+
+    <h3>What I'm Looking For</h3>
+    <p>
+      I’m looking for hands-on experience working with a professional software team — ideally one where I can learn from experienced developers.
+      After three years of teaching computer programming, I’m ready to return to a learning role and deepen my understanding of real-world software development.
+    </p>
+
+    <p><strong>My goals are to:</strong></p>
+    <ul>
+      <li>Understand how professional development teams operate</li>
+      <li>Strengthen my skills with the Java tech stack, including:</li>
+    </ul>
+
+    <ul>
+      <li>Spring Boot (my custom annotation experience gives me insight into how Spring works internally)</li>
+      <li>PostgreSQL</li>
+      <li>Maven and related tools</li>
+    </ul>
+
+    <p>
+      While I’ve used these technologies independently, I know the right team will help me grow faster and prepare me for long-term success.
+    </p>
+  </section>
+</body>
+</html>
