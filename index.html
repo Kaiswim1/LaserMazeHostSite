@@ -5,14 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laser Maze Game</title>
   <style>
-    body {
-      background-color: #f9f9f9;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      text-align: center;
-      padding: 0px;
-      line-height: 1.6;
-    }
+   body {
+  margin: 0;
+  padding: 0 15px;   /* horizontal padding so content isn’t flush to edges */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  text-align: center; /* centers inline content by default */
+  background-color: #f9f9f9;
+}
+
+p, ul {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+video, img, button {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* On mobile - remove left/right padding if you want flush edges */
+@media (max-width: 600px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+
 
     h1 {
       font-size: 2.5em;
@@ -91,11 +117,13 @@
   <a href="Lazer Maze Game2.zip" download>
     <button>Download for desktop <i>(.JAR)</i></button>
   </a>   
-  <a href="https://github.com/Kaiswim1/LaserMazeGameJava" target="_blank">
+  <a href="https://github.com/Kaiswim1/LaserMazeGameJava">
   <button class="black">Github Repository</button>
 </a>
   <hr>
-  <video autoplay muted loop playsinline src="laserMazeVideo.mp4"  style="display: block; margin: 0 auto; width: 65%; height: auto;">></video>
+  <video autoplay muted loop playsinline src="laserMazeVideo.mp4"
+  style="display: block; margin: 0 auto; width: 65%; max-width: 300px; height: auto;">
+</video>
 
 
   <section>
